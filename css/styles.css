@@ -24,3 +24,65 @@
     font-style: normal;
 
 }
+
+:root {
+    --light-color: rgb(232, 210, 194);
+    --light-color-hsl: hsl(25, 70%, 87%);
+    --second-color: rgb(181, 144, 127);
+    --dark-color: rgb(29, 31, 27);
+    --third-color: rgb(58, 56, 28);
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+.left-hero {
+    flex: 1;
+    box-sizing: border-box;
+    height: 100vh;
+    background: url("../images/forest-mountain.jpg") no-repeat;
+    background-size: cover;
+    display: relative;
+}
+
+.hero-content {
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    flex-direction: row;
+    align-items: center;
+}
+
+.hero-tint-box {
+    display: flex;
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 45vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+}
+
+.odin-logo {
+    height: 5.5rem;
+    margin-right: 1ch;
+}
+
+.logo-tint-box {
+    
+}
+
+.logo-text {
+    font-family: "norsebold";
+    font-size: 4rem;
+    color: var(--light-color-hsl);
+    margin-top: 0.4rem;
+}
+
+main {
+    flex: 2;
+}
