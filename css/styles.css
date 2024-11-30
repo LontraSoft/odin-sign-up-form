@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'norsebold';
-    src: url('./fonts/norse-bold-webfont.woff2') format('woff2'),
-         url('./fonts/norse-bold-webfont.woff') format('woff');
+    src: url('../fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('../fonts/norse-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'vigaregular';
-    src: url('./fonts/viga-regular-webfont.woff2') format('woff2'),
-         url('./fonts/viga-regular-webfont.woff') format('woff');
+    src: url('../fonts/viga-regular-webfont.woff2') format('woff2'),
+         url('../fonts/viga-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'avarabold';
-    src: url('./fonts/avara-webfont.woff2') format('woff2'),
-         url('./fonts/avara-webfont.woff') format('woff');
+    src: url('../fonts/avara-webfont.woff2') format('woff2'),
+         url('../fonts/avara-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
