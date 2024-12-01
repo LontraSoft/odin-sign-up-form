@@ -25,32 +25,104 @@
 
 }
 
+/*------------------------------------------------------------------------*/
+/* A Modern CSS Reset - Josh Comeau                  */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/*------------------------------------------------------------------------*/
+
 :root {
     --light-color: rgb(232, 210, 194);
     --light-color-hsl: hsl(25, 70%, 87%);
     --second-color: rgb(181, 144, 127);
+    --second-color-hsl-bright: hsl(19, 60%, 60%);
     --dark-color: rgb(29, 31, 27);
     --third-color: rgb(58, 56, 28);
+    --third-color-hsl: hsl(56, 30%, 5%);
+    --third-color-hsl-bright: hsl(56, 40%, 50%);
+    --valid-color: hsl(70, 40%, 50%);
+    --invalid-color: hsl(19, 60%, 60%);
+    --focus-color: hsl(160, 30%, 50%);
+
+    --header-font: "avarabold";
+    --paragraph-font: "vigaregular";
+    --main-horizontal-padding: max(10px, 5vw);
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
     display: flex;
+    font-family: var(--paragraph-font), sans-serif, system-ui;
 }
 
 .left-hero {
     flex: 1;
     box-sizing: border-box;
-    height: 100vh;
+    height: max(400px, 100vh);
     background: url("../images/forest-mountain.jpg") no-repeat;
     background-size: cover;
     display: relative;
 }
 
 .hero-content {
-    display: flex;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
@@ -62,18 +134,15 @@ body {
     display: flex;
     width: 100%;
     padding: 5px 0;
-    margin-bottom: 45vh;
+    margin-top: 10vh;
     background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
 }
 
 .odin-logo {
     height: 5.5rem;
+    margin-top: 7px;
     margin-right: 1ch;
-}
-
-.logo-tint-box {
-    
 }
 
 .logo-text {
@@ -85,4 +154,103 @@ body {
 
 main {
     flex: 2;
+    background-color: var(--third-color-hsl);
+    color: var(--light-color-hsl);
+
+}
+
+.upper-text {
+    padding: 0 var(--main-horizontal-padding);
+}
+
+.hook-text {
+    margin-top: 10vh;
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+}
+
+em {
+    margin-right: 0.3ch;
+}
+
+.hook-text + p {
+    font-size: 1.2rem;
+}
+
+.call-to-action {
+    font-family: "norsebold", serif;
+    font-size: 1.7rem;
+    margin-top: -8px;
+    letter-spacing: 0.2ch;
+}
+
+.entice-text {
+    margin-top: 5vh;
+    font-size: 1.2rem;
+}
+
+.form-entry {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px var(--main-horizontal-padding);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: max(10px, 3vw);
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.form-item > label {
+    font-size: 0.7rem;
+}
+
+input {
+    border-radius: 4px;
+    width: 100%;
+}
+
+.bottom-section {
+    padding: 10px var(--main-horizontal-padding);
+}
+
+#sign-up-button {
+    background-color: var(--third-color-hsl-bright);
+    margin: 8px 0 10px 0;
+    border: none;
+    border-radius: 16px;
+    width: max(200px, 20vw);
+    height: 2rem;
+}
+
+a {
+    color: var(--third-color-hsl-bright);
+    text-decoration: none;
+}
+
+input:user-invalid {
+    border-color: var(--invalid-color);
+    box-shadow: 2px 2px 4px var(--invalid-color);
+}
+
+input:user-valid {
+    border-color: var(--valid-color);
+    box-shadow: 2px 2px 4px var(--valid-color);
+}
+
+input:focus {
+    border: 1px solid var(--focus-color);
+    outline: 1px solid var(--focus-color);
+    box-shadow: 0 0 10px 4px var(--focus-color);
 }
