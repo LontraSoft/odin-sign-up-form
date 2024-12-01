@@ -188,6 +188,7 @@ em {
 .entice-text {
     margin-top: 5vh;
     font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 .form-entry {
@@ -228,7 +229,7 @@ input {
 
 #sign-up-button {
     background-color: var(--third-color-hsl-bright);
-    margin: 8px 0 10px 0;
+    margin: 16px 0 6px 0;
     border: none;
     border-radius: 16px;
     width: max(200px, 20vw);
