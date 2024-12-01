@@ -107,6 +107,11 @@ p {
     padding: 0;
 }
 
+a {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -116,18 +121,17 @@ body {
 .left-hero {
     flex: 1;
     box-sizing: border-box;
-    height: max(530px, 100vh);
+    height: max(540px, 100vh);
     background: url("../images/forest-mountain.jpg") no-repeat;
     background-size: cover;
-    display: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hero-content {
-    width: 100%;
-    height: auto;
+    flex: auto;
     background-color: rgba(0, 0, 0, 0.2);
-    flex-direction: row;
-    align-items: center;
 }
 
 .hero-tint-box {
@@ -150,6 +154,14 @@ body {
     font-size: 4rem;
     color: var(--light-color-hsl);
     margin-top: 0.4rem;
+}
+
+.credit {
+    font-size: 0.6rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--light-color-hsl);
+    flex: 0;
+    align-self: center;
 }
 
 main {
