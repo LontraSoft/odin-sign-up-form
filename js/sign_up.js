@@ -17,7 +17,7 @@ function emailErrorCheck() {
 }
 
 function phoneErrorCheck() {
-    if (!telephone.validity.valid) {
+    if (!telephoneRegex.test(telephone.value)) {
 	telephone.setCustomValidity('A valid phone number is in the form "123-456-7890"');
     }
     else {
