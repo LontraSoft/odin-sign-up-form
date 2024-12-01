@@ -8,7 +8,7 @@ const password = document.getElementById('password');
 const passwordValidation = document.getElementById('password-validation');
 
 function emailErrorCheck() {
-    if (!email.validity.valid) {
+    if (!emailRegex.test(email.value)) {
 	email.setCustomValidity('A valid email address is in the form "johndoe@example.com"');
     }
     else {
