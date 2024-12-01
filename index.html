@@ -34,34 +34,64 @@
 	  <div class="form-row">
 	    <div class="form-item">
 	      <label for="first-name">FIRST NAME</label>
-	      <input type="text" name="first_name" id="first-name" required>
+	      <input type="text"
+		     name="first_name"
+		     id="first-name"
+		     aria-required="true"
+		     required>
 	    </div>
 
 	    <div class="form-item">
 	      <label for="last-name">LAST NAME</label>
-	      <input type="text" name="last_name" id="last-name" required>
+	      <input type="text"
+		     name="last_name"
+		     id="last-name"
+		     aria-required="true"
+		     required>
 	    </div>
 	  </div>
 	  <div class="form-row">
 	    <div class="form-item">
 	      <label for="email">EMAIL</label>
-	      <input type="email" name="email" id="email" required>
+	      <input type="email"
+		     name="email"
+		     id="email"
+		     pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|&quot;(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*&quot;)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+		     aria-required="true"
+		     required>
 	    </div>
 
 	    <div class="form-item">
 	      <label for="phone">PHONE</label>
-	      <input type="tel" name="phone" id="phone" required>
+	      <input type="tel"
+		     name="phone"
+		     id="phone"
+		     pattern="[0-9]{3}[\s.\-]*[0-9]{3}[\s.\-]*[0-9]{4}"
+		     aria-required="true"
+		     required>
 	    </div>
 	  </div>
 	  <div class="form-row">
 	    <div class="form-item">
 	      <label for="password">PASSWORD</label>
-	      <input type="password" name="password" id="password" required>
+	      <input type="password"
+		     name="password"
+		     id="password"
+		     minlength="12"
+		     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{12,}"
+		     aria-required="true"
+		     required>
 	    </div>
 
 	    <div class="form-item">
 	      <label for="password_validation">CONFIRM PASSWORD</label>
-	      <input type="password" name="password_validation" id="password_validation" required>
+	      <input type="password"
+		     name="password_validation"
+		     id="password-validation"
+		     minlength="12"
+		     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{12,}"
+		     aria-required="true"
+		     required>
 	    </div>
 	  </div>
 	</form>
